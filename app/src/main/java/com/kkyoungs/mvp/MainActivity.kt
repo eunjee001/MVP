@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity(), Contract.View {
         mBinding.tvSecondName.text = info.getString("second")
     }
 
-    fun initButtonListener(){
+    private fun initButtonListener(){
         mBinding.btn.setOnClickListener{
-            var info = JSONObject()
+            val info = JSONObject()
             info.put("first", mBinding.etFirstName.text.toString())
             info.put("second", mBinding.etSecondName.text.toString())
 
